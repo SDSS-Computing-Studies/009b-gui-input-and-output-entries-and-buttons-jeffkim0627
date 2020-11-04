@@ -15,14 +15,14 @@ from tkinter import *
 win = tk.Tk()
 
 
-label1 = Label(win, width=15, text="Dear " textvariable=labelData)
+label1 = Label(win, width=15, text="Dear ")
 e1 = Entry(win, text="Noun, ", width=10)
-label2 = Label(win, width=15, text="you " textvariable=labelData)
-e2 = Entry(win, text="are/aren't" width=10)
-label
+label2 = Label(win, width=15, text="you ")
+e2 = Entry(win, text="are/aren't", width=10)
 
 
-
+label1.pack()
+label2.pack()
 e1.pack()
 e2.pack()
 
