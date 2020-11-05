@@ -12,3 +12,70 @@ The program should display the factored form in an Entry widget.
 Extension: make the + between a,b and b,c buttons that will toggle
 between + and -.
 """
+
+import tkinter as tk 
+from tkinter import *
+
+
+
+win = tk.Tk()
+win.title("Madlib")
+
+win.geometry("800x400")
+
+
+def factorize():
+    b = float(Entry1.get())
+    c = float(Entry2.get())
+    
+
+    print(o + " " + p)
+
+    #answer = (x+x)(x+y)
+    #finalTry.insert(0,answer)
+
+
+
+
+label1 = Label(win, width=2, text="x^2")
+label2 = Label(win, width=2, text="x")
+label3 = Label(win, text="+", width=3)
+label4 = Label(win, text="+", width=3)
+Button1 = Button(win, text="factorize", command=factorize)
+
+
+Entry1 = Entry(win, text="b", width=3)
+Entry2 = Entry(win, text="c", width=3)
+finalTry = Entry(win, text="adj", width=15)
+
+
+
+label1.grid(row=1, column=1)
+label2.grid(row=1, column=4)
+label3.grid(row=1, column=2)
+label4.grid(row=1, column=5)
+
+Button1.place(x=0, y=100)
+
+
+Entry1.grid(row=1, column=3)
+Entry2.grid(row=1, column=6)
+finalTry.place(x=150, y=100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+win.mainloop()
