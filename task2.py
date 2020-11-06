@@ -25,14 +25,35 @@ win.geometry("800x400")
 
 
 def factorize():
-    b = float(Entry1.get())
-    c = float(Entry2.get())
+    b = int(Entry1.get())
+    c = int(Entry2.get())
     
+    nums = []
+    for i in range(1, c + 1):
+        if c % i == 0:
+            nums.append(i)
+    nums.sort()
+    print(nums)
+    count = 0
+    xval = ""
+    yval = ""
+    q = 0
+    w = -1
+    while (nums[q]+nums[w] != b):
+        count = count+1
+        w = w-1
+        q=q+1
+       # if nums[w] == nums[-1]:
+       #     q = q+1
+       #     w = w + count
 
-    print(o + " " + p)
+        xval = nums[q]
+        yval = nums[w]
 
-    #answer = (x+x)(x+y)
-    #finalTry.insert(0,answer)
+    print(str(xval) + "  " + str(yval))
+
+    answer = "(x+" + str(xval) + ")(x+" + str(yval) + ")"
+    finalTry.insert(0,answer)
 
 
 
